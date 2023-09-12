@@ -1,10 +1,45 @@
+import { useEffect, useReducer } from "react";
 import Header from "./components/Header";
+import Main from "./components/Main";
+
+const initialState = {
+  questions: [],
+  status: "loading",
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "dataReceived":
+      return { ...state, questions: action.payload, status: "ready" };
+    case "dataFailed":
+      return { ...state, status: "error" };
+
+    default:
+      throw new Error("Unknown action");
+  }
+}
 
 function App() {
+  const [{ questions }, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      try {
+        const res = await fetch(`http://localhost:8000/questions`);
+        const data = await res.json();
+        dispatch({ type: "dataReceived", payload: data });
+      } catch (error) {
+        dispatch({ type: "dataFailed" });
+      }
+    };
+    fetchQuestions();
+  }, []);
+  console.log(questions);
+
   return (
-    <main className="bg-slate-600 min-h-screen flex flex-col justify-center items-center">
+    <Main>
       <Header />
-    </main>
+    </Main>
   );
 }
 

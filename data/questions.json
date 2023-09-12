@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "question": "Who was the first President of the United States?",
+      "answers": {
+        "a": "George Washington",
+        "b": "Thomas Jefferson",
+        "c": "Abraham Lincoln",
+        "d": "John Adams"
+      },
+      "correct_answer": "a",
+      "difficulty": "Easy",
+      "points": 10
+    },
+    {
+      "question": "Which country is the largest by land area in the world?",
+      "answers": {
+        "a": "Russia",
+        "b": "Canada",
+        "c": "China",
+        "d": "United States"
+      },
+      "correct_answer": "a",
+      "difficulty": "Medium",
+      "points": 15
+    },
+    {
+      "question": "What is the lightest chemical element?",
+      "answers": {
+        "a": "Hydrogen",
+        "b": "Helium",
+        "c": "Lithium",
+        "d": "Nitrogen"
+      },
+      "correct_answer": "a",
+      "difficulty": "Easy",
+      "points": 10
+    },
+    {
+      "question": "Who wrote the novel 'Crime and Punishment'?",
+      "answers": {
+        "a": "Fyodor Dostoevsky",
+        "b": "Leo Tolstoy",
+        "c": "Charles Dickens",
+        "d": "Jane Austen"
+      },
+      "correct_answer": "a",
+      "difficulty": "Medium",
+      "points": 15
+    },
+    {
+      "question": "Who painted the 'Mona Lisa'?",
+      "answers": {
+        "a": "Leonardo da Vinci",
+        "b": "Vincent van Gogh",
+        "c": "Pablo Picasso",
+        "d": "Rembrandt"
+      },
+      "correct_answer": "a",
+      "difficulty": "Easy",
+      "points": 10
+    },
+    {
+      "question": "Which country is considered the birthplace of soccer (football)?",
+      "answers": {
+        "a": "Brazil",
+        "b": "England",
+        "c": "Germany",
+        "d": "Italy"
+      },
+      "correct_answer": "b",
+      "difficulty": "Medium",
+      "points": 15
+    },
+    {
+      "question": "Who played the lead role in the movie 'Forrest Gump'?",
+      "answers": {
+        "a": "Tom Hanks",
+        "b": "Brad Pitt",
+        "c": "Leonardo DiCaprio",
+        "d": "Robert De Niro"
+      },
+      "correct_answer": "a",
+      "difficulty": "Easy",
+      "points": 10
+    },
+    {
+      "question": "Which rock band is known for the album 'The Dark Side of the Moon'?",
+      "answers": {
+        "a": "Pink Floyd",
+        "b": "The Beatles",
+        "c": "Led Zeppelin",
+        "d": "Queen"
+      },
+      "correct_answer": "a",
+      "difficulty": "Medium",
+      "points": 15
+    },
+    {
+      "question": "What is the sum of all angles in a triangle?",
+      "answers": {
+        "a": "90 degrees",
+        "b": "120 degrees",
+        "c": "180 degrees",
+        "d": "360 degrees"
+      },
+      "correct_answer": "c",
+      "difficulty": "Easy",
+      "points": 10
+    },
+    {
+      "question": "What is the primary ingredient in traditional Italian dish spaghetti carbonara?",
+      "answers": {
+        "a": "Pasta",
+        "b": "Eggs",
+        "c": "Tomatoes",
+        "d": "Parmesan Cheese"
+      },
+      "correct_answer": "b",
+      "difficulty": "Medium",
+      "points": 15
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { useEffect, useReducer } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Loader from "./components/Loader";
+import Error from "./components/Error"
 
 const initialState = {
   questions: [],
@@ -40,6 +41,7 @@ function App() {
     <Main>
       <Header />
       {status === "loading" && <Loader />}
+      {status === "error" && <Error/>}
     </Main>
   );
 }

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-Main.PropTypes = {
+Main.propTypes = {
   children: PropTypes.node,
 };
 export default function Main({ children }) {

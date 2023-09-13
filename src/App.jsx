@@ -10,6 +10,8 @@ const initialState = {
   questions: [],
   status: "loading",
   index: 0,
+  answer: null,
+  points: 0,
 };
 
 function reducer(state, action) {
@@ -20,6 +22,14 @@ function reducer(state, action) {
       return { ...state, status: "error" };
     case "start":
       return { ...state, status: "active" };
+    case "newAnswer": {
+      const q = state.questions.at(state.index);
+      return {
+        ...state,
+        answer: action.payload,
+        points: action.payload === q.correct_answer ? state.points + q.points : state.points,
+      };
+    }
 
     default:
       throw new Error("Unknown action");
@@ -27,7 +37,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [{ questions, status, index }, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status, index, answer }, dispatch] = useReducer(reducer, initialState);
   const questionsNum = questions.length;
 
   useEffect(() => {
@@ -49,7 +59,7 @@ function App() {
       {status === "loading" && <Loader />}
       {status === "error" && <Error />}
       {status === "ready" && <StartScreen questionsNum={questionsNum} dispatch={dispatch} />}
-      {status === "active" && <Question question={questions[index]} />}
+      {status === "active" && <Question question={questions[index]} dispatch={dispatch} answer={answer} />}
     </Main>
   );
 }

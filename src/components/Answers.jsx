@@ -17,7 +17,9 @@ export default function Answers({ question, dispatch, answer }) {
             hasAnswered
               ? question.correct_answer === answer && question.correct_answer === key
                 ? "bg-teal-400 dark:text-black dark:hover:bg-transparent pointer-events-none"
-                : "bg-rose-400 dark:hover:bg-transparent pointer-events-none opacity-50"
+                : question.correct_answer !== key
+                ? "bg-rose-400 dark:hover:bg-transparent pointer-events-none opacity-50"
+                : "bg-teal-400 dark:text-black dark:hover:bg-transparent pointer-events-none"
               : ""
           }`}
           disabled={hasAnswered}

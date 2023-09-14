@@ -1,13 +1,8 @@
 import PropTypes from "prop-types";
-ProgressBar.propTypes = {
-  questionsNum: PropTypes.number,
-  index: PropTypes.number,
-  points: PropTypes.number,
-  maxPoints: PropTypes.number,
-};
+import { memo } from "react";
 
-export default function ProgressBar({ index, questionsNum, points, maxPoints }) {
-  console.log(maxPoints);
+const Progress = memo(function ProgressBar({ index, questionsNum, points, maxPoints }) {
+  console.log("rerender");
   return (
     <div className="">
       <progress className="block mx-auto my-4" value={points} max={maxPoints}></progress>
@@ -21,4 +16,12 @@ export default function ProgressBar({ index, questionsNum, points, maxPoints }) 
       </div>
     </div>
   );
-}
+});
+
+Progress.propTypes = {
+  questionsNum: PropTypes.number,
+  index: PropTypes.number,
+  points: PropTypes.number,
+  maxPoints: PropTypes.number,
+};
+export default Progress;
